@@ -35,3 +35,10 @@
 !/**/
 !*.*
 *.o
+
+# Input/Output files
+*.txt
+*.in
+*.out
+
+
