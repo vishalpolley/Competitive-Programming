@@ -44,6 +44,10 @@ aabbaa
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+// DP Solution
+// Time Complexity - O(n*2)
+// Space Complexity - O(n*2)
 string longestPalindrome(string str)
 {
     string ans;
@@ -82,10 +86,37 @@ string longestPalindrome(string str)
     }
     return ans;
 }
+*/
+
+string longestPalindrome(string str)
+{
+    int h, l;
+    int i1 = 0, i2 = 0;
+    string ans;
+    int len = str.length();
+    for(int i = 0; i < len; ++i)
+    {
+        // Length of string is Even
+        l = i;
+        h = i+1;
+        while(l >= 0 && h < len && str[l] == str[h])
+            l--, h++;
+        if(h-l-2 > i2-i1)
+            i1 = l+1, i2 = h-1;
+        // Length of string is Odd
+        l = i-1;
+        h = i+1;
+        while(l >= 0 && h < len && str[l] == str[h])
+            l--, h++;
+        if(h-l-2 > i2-i1)
+            i1 = l+1, i2 = h-1;
+    }
+    return str.substr(i1, i2-i1+1);
+}
 
 int main()
 {
-    freopen("in.in", "r", stdin);
+    freopen("../in.in", "r", stdin);
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t; cin >> t;
