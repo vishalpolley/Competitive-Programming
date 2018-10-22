@@ -44,11 +44,11 @@ aabbaa
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
+
 // DP Solution
 // Time Complexity - O(n*2)
 // Space Complexity - O(n*2)
-string longestPalindrome(string str)
+string longestPalindromeDP(string str)
 {
     string ans;
     int max_len = 0;
@@ -86,8 +86,9 @@ string longestPalindrome(string str)
     }
     return ans;
 }
-*/
 
+// Time Complexity - O(n*2)
+// Space Complexity - O(1)
 string longestPalindrome(string str)
 {
     int h, l;
