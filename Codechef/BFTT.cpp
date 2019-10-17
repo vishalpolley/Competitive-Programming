@@ -15,7 +15,7 @@ long int count_3(long int n)
 
 int main()
 {
-//    freopen("in.in", "r", stdin);
+
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int t;
