@@ -1,10 +1,4 @@
-/*
-1
-3 2
-1 6
-2 4
-3 6
-*/
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,7 +9,8 @@ int main() {
     cin.tie(NULL);
     int t; cin >> t;
     while(t--) {
-        int n, k; cin >> n >> k;
+        int n, k;
+         cin >> n >> k;
         pair<int, int> p[n];
         for(int i = 0; i < n; ++i)
             cin >> p[i].first >> p[i].second;
