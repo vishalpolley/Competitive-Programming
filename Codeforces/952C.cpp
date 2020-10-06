@@ -4,13 +4,14 @@ using namespace std;
 int main()
 {
     int* a = NULL;
-    int n;
+    int n,i=0;
     cin >> n;
     a = new int[n];
-    for(int i=0; i<n; i++)
-    {
-        cin >> a[i];
-    }
+   while(i<n)
+   {
+       cin>>a[i];
+       i++;
+   }
     for(int i=1; i<n; i++)
     {
         if(abs(a[i]-a[i-1])>1)
