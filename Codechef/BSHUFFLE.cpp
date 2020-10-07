@@ -37,9 +37,11 @@ int main()
     else
     {
         cout << "2 3 1 5 6 7 ";
-        for(int i = 8; i <= n; ++i)
-            cout << i << ' ';
+        int i=8;
+        while(i<=n){
+            i++;
         cout << "4";
+        }
     }
     cout << "\n" << n << ' ';
     for(int i = 1; i < n; ++i)
